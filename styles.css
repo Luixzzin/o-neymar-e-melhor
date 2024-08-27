@@ -8,17 +8,20 @@
 /* Estilos gerais do corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #f3f4f6, #d9e3f0);
     color: #333;
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
 /* Estilo do cabeçalho */
 header {
-    background: #8a4b5b; /* Cor que remete à elegância dos cavalos */
+    background: #005f73; /* Cor rica e profunda */
     color: #fff;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -27,54 +30,70 @@ header h1 {
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-top: 0;
 }
 
 /* Estilo do conteúdo principal */
 main {
-    padding: 1rem;
+    padding: 2rem 1rem;
 }
 
 /* Estilo da galeria de cavalos */
 .horse-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 /* Estilo dos cards dos cavalos */
 .horse-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .horse-card img {
     width: 100%;
-    height: auto;
+    height: 180px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
 .horse-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: #005f73;
     margin: 1rem 0 0.5rem;
 }
 
 .horse-card p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    color: #555;
     padding: 0 1rem 1rem;
+}
+
+/* Efeitos ao passar o mouse sobre o card */
+.horse-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.horse-card:hover img {
+    opacity: 0.8;
 }
 
 /* Estilo do rodapé */
 footer {
-    background: #8a4b5b;
+    background: #005f73;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    width: 100%;
+    padding: 1rem;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
 
 footer p {
